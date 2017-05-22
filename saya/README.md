@@ -21,8 +21,8 @@ I'm craving for some {term} food
 I'm craving for some {term} food in {city}
 
 3. Youtube:
- - watch video on youtube
- - i want to watch _title
+ - Watch video on youtube
+ - I want to watch _title
 
 4.Simple math 
  - simple operations :  + , - , * , / 
