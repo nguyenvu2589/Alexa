@@ -1,0 +1,53 @@
+{
+  "intents": [
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "drinkName",
+          "type": "drinks"
+        }
+      ],
+      "intent": "findDrinkIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "ingreName",
+          "type": "AMAZON.Food"
+        }
+      ],
+      "intent": "findIngredientIntent"
+    },
+    {
+      "slots": [
+        {
+          "name": "option",
+          "type": "options"
+        }
+      ],
+      "intent": "findDrinksecondIntent"
+    }
+  ]
+}
+
+findDrinkIntent What is {drinkName}
+findDrinkIntent Tell me about {drinkName}
+findDrinkIntent Find me something good
+findDrinkIntent Suggest me a drink
+
+findDrinksecondIntent {option} one
+findDrinksecondIntent How about {option} one
+findDrinksecondIntent {option}
+findDrinksecondIntent number {option}
+findDrinksecondIntent How about {option}
+
+findIngredientIntent ingredient {ingreName}
