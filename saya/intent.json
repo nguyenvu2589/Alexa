@@ -1,0 +1,188 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "checkTraffic",
+      "samples": [
+        "check {school | destination} traffic",
+        "check {work | destination} traffic"
+      ],
+      "slots": [
+        {
+          "name": "destination",
+          "type": "LITERAL",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "HelloIntent",
+      "samples": [
+        "say hello to {firstname}",
+        "say hi to {firstname}",
+        "this is {firstname}"
+      ],
+      "slots": [
+        {
+          "name": "firstname",
+          "type": "AMAZON.US_FIRST_NAME",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "introIntent",
+      "samples": [
+        "What can i ask",
+        "What can i ask you",
+        "what can you do"
+      ],
+      "slots": []
+    },
+    {
+      "name": "mathIntent",
+      "samples": [
+        "what is {firstnumber} {operand} {secondnumber}",
+        "{firstnumber} {operand} {secondnumber}"
+      ],
+      "slots": [
+        {
+          "name": "firstnumber",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        },
+        {
+          "name": "secondnumber",
+          "type": "AMAZON.NUMBER",
+          "samples": []
+        },
+        {
+          "name": "operand",
+          "type": "operand",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "playMusic",
+      "samples": [
+        "i want to hear {song}"
+      ],
+      "slots": [
+        {
+          "name": "song",
+          "type": "AMAZON.MusicRecording",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "yelpIntent",
+      "samples": [
+        "I want some {term} food in {city}",
+        "I'm hungry for some {term} food in {city}",
+        "I'm hungry",
+        "I want food from {city}"
+      ],
+      "slots": [
+        {
+          "name": "term",
+          "type": "AMAZON.LocalBusiness",
+          "samples": []
+        },
+        {
+          "name": "city",
+          "type": "AMAZON.US_CITY",
+          "samples": []
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "destination",
+      "values": [
+        {
+          "name": {
+            "value": "work"
+          }
+        },
+        {
+          "name": {
+            "value": "school"
+          }
+        }
+      ]
+    },
+    {
+      "name": "operand",
+      "values": [
+        {
+          "name": {
+            "value": "add"
+          }
+        },
+        {
+          "name": {
+            "value": "plus"
+          }
+        },
+        {
+          "name": {
+            "value": "minus"
+          }
+        },
+        {
+          "name": {
+            "value": "subtract"
+          }
+        },
+        {
+          "name": {
+            "value": "multiply"
+          }
+        },
+        {
+          "name": {
+            "value": "times"
+          }
+        },
+        {
+          "name": {
+            "value": "divide"
+          }
+        }
+      ]
+    }
+  ]
+}
+
+HelloIntent say hello to {firstname}
+HelloIntent say hi to {firstname}
+HelloIntent this is {firstname}
+
+mathIntent what is {firstnumber} {operand} {secondnumber}
+mathIntent {firstnumber} {operand} {secondnumber}
+mathIntent what is {firstnumber} {operand} {secondnumber}
+mathIntent what is {firstnumber} {operand} {secondnumber}
+
+playMusic i want to hear {song}
+
+checkTraffic check {school | destination} traffic
+checkTraffic check {work | destination} traffic
+
+yelpIntent I want some {term} food in {city}
+yelpIntent I'm hungry for some {term} food in {city}
+yelpIntent I'm hungry 
+yelpIntent I want food from {city}
